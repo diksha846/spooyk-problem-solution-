@@ -1,0 +1,35 @@
+function getNum(A){
+  var max = 0;
+  for(let i = 0;i<A.length;i++){
+    
+    
+    max = Math.max(...A[i]);
+    var index = A[i].indexOf(max);
+    
+    
+    
+  for(let j =0; j<A[i].length;j++){
+  
+     if(max<=A[j][index]){     
+       
+       if(j==A[i].length-1){
+    
+       return max;
+          
+       }
+       
+     }
+    else{
+       break;
+     }
+   
+     
+   }
+    
+  }
+  
+  return "No such element in an given array";
+
+}
+
+console.log(getNum([[7,8,7],[5,4,2],[8,6,7]]));
