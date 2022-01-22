@@ -1,3 +1,4 @@
+
 // Importing express module
 const express = require('express');
 const app = express();
@@ -9,15 +10,9 @@ res.sendFile(__dirname + '/index.html');
 });
 
 app.post('/', (req, res) => {
-const { RegistrationNumber,
-VehicleType,
-City,
-ActiveOrdersCount } = req.body;
+const { Name,City } = req.body;
 const { authorization } = req.headers;
-res.send({RegistrationNumber,
-	VehicleType,
-	City,
-	ActiveOrdersCount
+res.send({Name,City 
 
 });
 });
